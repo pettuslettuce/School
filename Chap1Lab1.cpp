@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
 	// is this note needed? :)
-	cout << "What's up, Globe!?! \n";
+	cout << "What's up, Globe!?! Hello, World! \n";
 	cout << "I, Andrew Pettus, am excited to learn C++! \n";
 	return 0;
 }

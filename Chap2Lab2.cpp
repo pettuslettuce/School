@@ -9,14 +9,17 @@ using namespace std;
 
 int main() {
 
-    //memory allocation
-    double GPA
-    double Age
-    
     // creating variables
-    string myName = "Andrew M. Pettus";
-    float 
+    string studentName = "Johnny Oldman";
+    float GPA = 4.1;
+    int studentAge = 85; 
+    bool isStudentEnrolled = true;
 
+    //output
+    cout << "Name: " << studentName << endl;
+    cout << "GPA: " << GPA << endl;
+    cout << "Age: " << studentAge << endl;
+    cout << "Enrolled: " << isStudentEnrolled << endl;
 
     return 0;
 }

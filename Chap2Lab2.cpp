@@ -15,7 +15,7 @@ int main() {
     int studentAge = 85; 
     bool isStudentEnrolled = true;
 
-    //output
+    //output with all four variables
     cout << "Name: " << studentName << endl;
     cout << "GPA: " << GPA << endl;
     cout << "Age: " << studentAge << endl;

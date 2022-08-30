@@ -15,7 +15,7 @@ int main() {
     float testThree = 69.0;
     float gradeAvg = 0.0;
 
-    // averageing function for three tests
+    // averageing function for three tests; updating initial average
     gradeAvg = (testOne + testTwo + testThree) / 3 ;
 
     // output for updated average

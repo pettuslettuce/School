@@ -10,12 +10,12 @@ using namespace std;
 int main() {
     
     // creating required variables
-    float testOne = 66.6;
-    float testTwo = 42.0;
-    float testThree = 69.0;
-    float gradeAvg = 0.0;
+    double testOne = 66.6;
+    double testTwo = 42.0;
+    double testThree = 69.0;
+    double gradeAvg = 0.0;
 
-    // averageing function for three tests; updating initial average
+    // averaging function for three tests; updating initial average
     gradeAvg = (testOne + testTwo + testThree) / 3 ;
 
     // output for updated average

@@ -1,6 +1,6 @@
 //  
-//  Chap2Lab1.cpp
-//  Written by Andrew Pettus on 8/30/2022
+// Chap2Lab1.cpp
+// Written by Andrew Pettus on 8/30/2022
 //
 //
 
@@ -13,7 +13,7 @@ int main() {
     string myEmail = "apettus3@student.alamo.edu";
    
    // generating output text with variables
-   // whitespace in last position in quotes
+   // whitespaces included at end of texts
     cout << "My name is " << myName << ", and my email is " << myEmail << "\n";
     return 0;
 }

@@ -5,22 +5,36 @@
 //
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    
-    // creating required variables for inputs
-    string inputName = none;
-    string inputAddress = none;
-    string inputCity = none;
-    string inputState = none;
-    string inputZip = none;
 
-    //inputs for aofrementioned strings
-    cin << inputName, inputAddress, inputCity, inputState, inputZip << endl;
+    //variables
+    string userName;
+    string userStreet;
+    string userCity;
+    string userState;
+    string userZip;
 
-    //output of gathered inputs for letter formatting
-    cout << inputName "\n" << inputAddress "\n" << inputCity "\, " << inputSate "\, " << inputZip << endl;
+    //ask user for inputs
+    cout << "Please enter your full name: ";
+    getline(cin, userName);
+    cout << "Please enter your street address: ";
+    getline(cin, userStreet);
+    cout << "Please enter the city of the street address: ";
+    getline(cin, userCity);
+    cout << "Please enter the state of the street address: ";
+    getline(cin, userState);
+    cout << "Please enter the zip code of the street address: ";
+    getline(cin, userZip);
+
+    //envelope ready address output
+    cout << "\n\nYour Mailing Label: \n\n";
+    cout << userName << endl;
+    cout << userStreet << endl;
+    cout << userCity << ", " << userState << ", " << userZip << endl;
+
 
     return 0;
 }

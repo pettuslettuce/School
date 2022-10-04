@@ -1,0 +1,7 @@
+
+
+Your Mailing Label: 
+
+Andrew P
+cd "c:\code\ITSE-1302\Chapter 4\" ; if ($?) { g++ Chap4Lab2.cpp -o Chap4Lab2 } ; if ($?) { .\Chap4Lab2 }
+, , 

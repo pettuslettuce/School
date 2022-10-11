@@ -1,0 +1,9 @@
+Thanks for choosing the Alamo Hotel. 
+The booking information for the The Goblin Gala event is as follows: 
+The cost of renting one room without discount is: $100.00
+The cost of all rooms without discount: $4600.00
+The cost of renting one room with discount: $70.00
+The cost of all rooms with discount: $3220.00
+Total discount applied: $1380.00
+Total sales tax: $257.60
+Total owed by customer for all rooms: $3477.60

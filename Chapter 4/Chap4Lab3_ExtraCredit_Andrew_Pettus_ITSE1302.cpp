@@ -109,8 +109,6 @@ cout << "Total owed by customer for all rooms: $" << bookingTotal << endl;
 outFile << "Total owed by customer for all rooms: $" << bookingTotal << endl;
 
 //Close File
-outFile.close();
-
-return 0;
+outFile.close(); 
 }      
     

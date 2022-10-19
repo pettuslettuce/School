@@ -1,5 +1,5 @@
 //  Chap5Lab1.cpp
-//  Written by Andrew Pettus on Oct/13/2022
+//  Written by Andrew Pettus on Oct/15/2022
 //
 /*Write a program that uses a while loops to perform the following steps:
 
@@ -17,35 +17,32 @@ using namespace std;
 
 int lowerNumber = 0;
 int upperNumber = 0;
-int evenOutput = 0;
-int oddOutput = 0;
 int evenSum = 0;
 int oddSum = 0;
 int progCount = 0;
-int evenAdder = 0;
-int oddAdder = 0;
+
 
 int main(){
-cout << "What is the lower number in your range?" << endl;
+cout << "What is the lowest integer in your range?" << endl;
 cin >> lowerNumber;
-cout << "What is the upper number in your range?" << endl;
+cout << "What is the largest integer in your range?" << endl;
 cin >> upperNumber;
 progCount = lowerNumber;
 
 while ((progCount <= upperNumber) && (progCount >= lowerNumber)){
 
     if(progCount % 2 == 0){
-        cout << progCount << " is even!" << endl; 
-        evenSum = progCount +2
-        
+        cout << progCount << " is even." << endl; 
+        evenSum = evenSum + progCount;
     }
     else{
-        cout << progCount << " is odd!" << endl;  
+        cout << progCount << " is odd." << endl;  
+        oddSum = oddSum + progCount;
     }
     progCount++;
     }
-cout << evenSum << endl;
-cout << oddSum << endl;    
+cout << "The sum of all the even numbers is: " << evenSum << endl;
+cout << "The sum of all the odd numbers is: " << oddSum << endl;    
 return 0;
 }
          

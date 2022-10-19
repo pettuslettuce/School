@@ -15,9 +15,9 @@ int counterFive = 0;
 int progCount = 0;
 
 int main(){
-cout << "What is the lower number in your range?" << endl;
+cout << "What is the lowest integer in your range?" << endl;
 cin >> lowerNumber;
-cout << "What is the upper number in your range?" << endl;
+cout << "What is the largest integer in your range?" << endl;
 cin >> upperNumber;
 progCount = lowerNumber;
 
@@ -31,6 +31,8 @@ while ((progCount <= upperNumber) && (progCount >= lowerNumber)){
     }
     progCount++;
     }
+cout << "The lower range: " << lowerNumber << endl;
+cout << "The upper range: " << upperNumber << endl;
 cout << "The amount of numbers in your range that are multiples of 3 is: " << counterThree << endl;
 cout << "The amount of numbers in your range that are multiples of 5 is: " << counterFive << endl;
 return 0;

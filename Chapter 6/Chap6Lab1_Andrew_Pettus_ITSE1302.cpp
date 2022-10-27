@@ -18,26 +18,31 @@
 #include <iomanip>
 using namespace std;
 
-int accountBalance(int Balance, int Deposit);
+int accountBalance(double Balance, double Deposit);
 void printHeader();
 
 
 int main()
 {
-printHeader;
-accountBalance:
+    cout << fixed << showpoint << setprecision(1);
+
+    double userBalance = 0;
+    double userDeposit = 0;
+
+    printHeader();
+    cout << "Please enter your initial account balance: " << endl;
+    cin >> userBalance;
+    cout << "Please enter your deposit amount: " << endl;
+    cin >> userDeposit;
+    cout << "Your new account balance is: $" << accountBalance(userBalance, userDeposit) << endl;
+    
 return 0;
 }
          
-int accountBalance(int Balance, int Deposit, int newBalance)
+int accountBalance(double Balance, double Deposit)
 {
-    cout << "Please enter your initial balance: " << endl;
-    cin >> Balance;
-    cout << "Please enter your deposit amount: " << endl;
-    cin >> Deposit;
-    newBalance = Balance + Deposit;
-    cout << " Your new account balance is: " << newBalance << endl;
-    return 0;
+cout << Balance + Deposit;
+return 0;
 }
 
 void printHeader()

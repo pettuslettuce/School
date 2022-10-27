@@ -24,13 +24,13 @@ void printHeader();
 
 int main()
 {
-cout << printHeader << endl;
-cout << accountBalance << endl;
+printHeader;
+accountBalance:
+return 0;
 }
          
-int accountBalance(int Balance, int Deposit)
+int accountBalance(int Balance, int Deposit, int newBalance)
 {
-    int newBalance;
     cout << "Please enter your initial balance: " << endl;
     cin >> Balance;
     cout << "Please enter your deposit amount: " << endl;

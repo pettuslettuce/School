@@ -21,8 +21,11 @@ Message to the user that the box is either a rectangle or a square
 Visual Representation of the Box using the user identified character
 
 Functions to Create:
-Void function PrintHeader() - Create a Header to display  to the user similar to the function your wrote for the Module 6 - Lab 1). The Header will display "Box Program" as its title.
+Void function PrintHeader() - Create a Header to display  to the user similar to the function your wrote for the Module 6 - Lab 1). 
+The Header will display "Box Program" as its title.
+
 DrawBox(int length, int width, char charToDisplay) - the function will create the box as shown below and output to the screen
+
 PrintShapeType(int length, int width) - the function will display to the console the shape type (rectangle  or square)
 
 */
@@ -31,36 +34,44 @@ PrintShapeType(int length, int width) - the function will display to the console
 #include <iomanip>
 using namespace std;
 
-int accountBalance(double Balance, double Deposit);
 void printHeader();
+void drawBox(int pHeight, int pWidth, char pChar);
+void printShapeType(int height, int width);
 
 
 int main()
 {
-    cout << fixed << showpoint << setprecision(1);
-
-    double userBalance = 0;
-    double userDeposit = 0;
-
-    printHeader();
-    cout << "Please enter your initial account balance: " << endl;
-    cin >> userBalance;
-    cout << "Please enter your deposit amount: " << endl;
-    cin >> userDeposit;
-    cout << "Your new account balance is: $" << accountBalance(userBalance, userDeposit) << endl;
-    
+printHeader();
+drawBox();
+printShapeType();
 return 0;
 }
-         
-int accountBalance(double Balance, double Deposit)
+
+void drawBox(int height, int width, char charToDisplay)
 {
-cout << Balance + Deposit;
-return 0;
+cout << "How wide would you like your box?" << endl;
+cin >> width;
+cout << "How tall would you like your box?" << endl;
+cin >> height;
+cout << "What single character would you like to use to fill your box?: " << endl;
+cin >> charToDisplay;
+cout << "Your box's width is: " << width << endl;
+cout << "Your box's height is: " << height << endl;
 }
 
 void printHeader()
 {
     cout << "**********************************************" << endl;
-    cout << "                Alamo Bank                    " << endl;
+    cout << "                Box Program                   " << endl;
     cout << "**********************************************" << endl;
+}
+
+void PrintShapeType(int height, int width)
+{
+if (width == height){ // if box width is equal to its height, it's a square
+    cout << "This is a square" << endl;
+}
+else{
+    cout << "This is a rectangle" << endl; // if width and height are not equal, it's nothing but a rectangle
+}
 }

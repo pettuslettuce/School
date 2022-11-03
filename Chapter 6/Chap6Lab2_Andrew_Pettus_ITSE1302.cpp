@@ -31,36 +31,63 @@ PrintShapeType(int length, int width) - the function will display to the console
 #include <iomanip>
 using namespace std;
 
-int accountBalance(double Balance, double Deposit);
+int drawBox(int height, int width, char charToDisplay);
+int printShapeType(int height, int width);
 void printHeader();
-
 
 int main()
 {
-    cout << fixed << showpoint << setprecision(1);
+    int boxWidth = 0;
+    int boxHeight = 0;
+    char boxFill = '#';
 
-    double userBalance = 0;
-    double userDeposit = 0;
-
+    
+    
+    cout << "How wide would you like your box?" << endl;
+    cin >> boxWidth;
+    cout << "How tall would you like your box?" << endl;
+    cin >> boxHeight;
+    cout << "What single character would you like to use to fill your box?: " << endl;
+    cin >> boxFill;
+    cout << "Your box's width is: " << boxWidth << endl;
+    cout << "Your box's height is: " << boxHeight << endl;
+    
     printHeader();
-    cout << "Please enter your initial account balance: " << endl;
-    cin >> userBalance;
-    cout << "Please enter your deposit amount: " << endl;
-    cin >> userDeposit;
-    cout << "Your new account balance is: $" << accountBalance(userBalance, userDeposit) << endl;
+    printShapeType(boxHeight, boxWidth);
+    drawBox(boxHeight, boxWidth, boxFill);
     
 return 0;
 }
          
-int accountBalance(double Balance, double Deposit)
+int drawBox(int height, int width, char charToDisplay)
 {
-cout << Balance + Deposit;
+for (int row = 0; row < height; row++) // create "row" integer starting at 0, repeat while row number is less than box height, add 1 to "row" every iteration
+{
+    for (int column = 0; column < width; column++) // create "column" integer starting at 0, repeat while column number is less than box height, add 1 to "column" every iteration
+    {
+        cout << charToDisplay << " "; // filling the box in the "columns" with the chose character in addition to a whitespace
+    }
+    cout << endl; // ends the line of the current "row", allowing "columns" to populate again in next row
+}
 return 0;
 }
 
+
+printShapeType(int height, int width)
+{
+if (width == height){ // if box width is equal to its height, it's a square, duh
+    cout << "This is a square" << endl;
+}
+else{
+    cout << "This is a rectangle" << endl; // if width and height are not equal, it's nothing but a rectangle
+}
+return 0;
+}
+
+
 void printHeader()
 {
-    cout << "**********************************************" << endl;
-    cout << "                Alamo Bank                    " << endl;
-    cout << "**********************************************" << endl;
+    cout << "***********************************************" << endl;
+    cout << "                Box Program                    " << endl;
+    cout << "***********************************************" << endl;
 }

@@ -51,11 +51,10 @@ cout << "How tall would you like your box?" << endl;
 cin >> height;
 cout << "What single character would you like to use to fill your box?: " << endl;
 cin >> charToDisplay;
-cout << "Your box's width is: " << width << endl;
-cout << "Your box's height is: " << height << endl;
 
 printHeader();
-
+cout << "Your box's width is: " << width << endl;
+cout << "Your box's height is: " << height << endl;
 drawBox(height, width, charToDisplay);
 printShapeType(height, width);
 return 0;

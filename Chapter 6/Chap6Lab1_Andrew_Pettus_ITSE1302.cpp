@@ -28,7 +28,8 @@ int main()
 
     double userBalance = 0;
     double userDeposit = 0;
-
+// 1)Prompt the user for an initial savings account balance
+// 2)Prompt the user for a deposit amount
     printHeader();
     cout << "Please enter your initial account balance: " << endl;
     cin >> userBalance;
@@ -38,7 +39,8 @@ int main()
     
 return 0;
 }
-         
+
+// 1)Create a function that will take 2 arguments (current balance and deposit amount) and return the calculated balance of the account         
 int accountBalance(double Balance, double Deposit)
 {
 cout << Balance + Deposit;

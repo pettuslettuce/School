@@ -35,20 +35,16 @@ PrintShapeType(int length, int width) - the function will display to the console
 using namespace std;
 
 void printHeader();
-void drawBox(int pHeight, int pWidth, char pChar);
-void printShapeType(int height, int width);
+int drawBox(int pHeight, int pWidth, char pChar);
+int printShapeType(int pHeight, int pWidth);
 
 
 int main()
 {
-printHeader();
-drawBox();
-printShapeType();
-return 0;
-}
+int width;
+int height;
+char charToDisplay;
 
-void drawBox(int height, int width, char charToDisplay)
-{
 cout << "How wide would you like your box?" << endl;
 cin >> width;
 cout << "How tall would you like your box?" << endl;
@@ -57,6 +53,26 @@ cout << "What single character would you like to use to fill your box?: " << end
 cin >> charToDisplay;
 cout << "Your box's width is: " << width << endl;
 cout << "Your box's height is: " << height << endl;
+
+printHeader();
+
+drawBox(height, width, charToDisplay);
+printShapeType(height, width);
+return 0;
+
+}
+
+int drawBox(int pHeight, int pWidth, char pChar)
+{
+for (int row = 0; row < pHeight; row++) // create "row" integer starting at 0, repeat while row number is less than box height, add 1 to "row" every iteration
+{
+    for (int column = 0; column < pWidth; column++) // create "column" integer starting at 0, repeat while column number is less than box height, add 1 to "column" every iteration
+    {
+        cout << pChar << " "; // filling the box in the "columns" with the chose character in addition to a whitespace
+    }
+    cout << endl; // ends the line of the current "row", allowing "columns" to populate again in next row
+}
+return 0;
 }
 
 void printHeader()
@@ -66,12 +82,13 @@ void printHeader()
     cout << "**********************************************" << endl;
 }
 
-void PrintShapeType(int height, int width)
+int printShapeType(int pHeight, int pWidth)
 {
-if (width == height){ // if box width is equal to its height, it's a square
+if (pWidth == pHeight){ // if box width is equal to its height, it's a square
     cout << "This is a square" << endl;
 }
 else{
     cout << "This is a rectangle" << endl; // if width and height are not equal, it's nothing but a rectangle
 }
+return 0;
 }

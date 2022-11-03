@@ -1,0 +1,50 @@
+//  October 25 2022 Class 16
+//  Example of pre-defined functions .
+
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <cctype>
+
+int largerNumber(int pOne, int PTwo); //black box that is being given two intergers
+int addNumbers(int, int); // black box that is also being two integers, variable names optional
+
+using namespace std;
+
+int main() {
+    int myNumberOne = 5;
+    int myNumberTwo = 10;
+   
+    cout << "The larger of the two numbers is " << largerNumber(myNumberOne, myNumberTwo) << endl;
+    cout << "the two numbers added togather are " << addNumbers(myNumberOne, myNumberTwo) << endl;
+    return 0;
+} //END OF MAIN
+
+/*
+*******************************
+Now we define our functions
+*******************************
+*/
+//Function Returns largest of two parameters
+int largerNumber(int pOne, int pTwo)
+{
+    if(pOne > pTwo)
+    {
+        return pOne;
+    }
+    else if (pTwo > pOne)
+    {
+        return pTwo;
+    }
+    else
+    {
+        return pOne;
+    }
+} // end of function largerNumber
+
+int addNumbers(int pOne, int pTwo)
+{
+    int myResult = 0;
+    myResult = pOne + pTwo;
+    return myResult;
+} // end of function addNumbers

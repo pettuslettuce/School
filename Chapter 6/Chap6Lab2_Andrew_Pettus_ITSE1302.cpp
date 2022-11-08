@@ -27,7 +27,6 @@ The Header will display "Box Program" as its title.
 DrawBox(int length, int width, char charToDisplay) - the function will create the box as shown below and output to the screen
 
 PrintShapeType(int length, int width) - the function will display to the console the shape type (rectangle  or square)
-
 */
 
 #include <iostream>

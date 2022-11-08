@@ -22,7 +22,7 @@ int main()
 	int totalSmall = 0;
 	int totalMedium = 0;
 	int totalLarge = 0;
-	char runagain;
+
 
 	do {
 		tutorial(small, totalSmall, medium, totalMedium, large, totalLarge);

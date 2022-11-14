@@ -11,7 +11,7 @@ using namespace std;
 //first we prototype our functions
 void printHeader(string);
 void printFooter();
-void printLine();n
+void printLine();
 int largestNumber(int, int);
 
 //our main functions

@@ -8,155 +8,175 @@ If you choose to take on this task - complete the program with Global variables 
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
+// small (9 oz) at $1.75, medium (12 oz) at $1.90, and large (15 oz) at $2.00. 
 const double smallCup = 1.75;
 const double mediumCup = 1.90;
 const double largeCup = 2.00;
+double moneyMade = 0;
+int small = 0;
+int medium = 0;
+int large = 0;
+int totalSmall = 0;
+int totalMedium = 0;
+int totalLarge = 0;
+char userChoice;
+//program should be Menu Driven (Write a menu-driven program that will make the coffee shop operational.
 
-
-int systemIntro();     //a function to show the user how to use the program,
-int coffeePOS();       //a function to sell coffee, (Buy coffee in any size and in any number of cups.)
-int displayMenu();     //a function to display the menu
-int sizesSold();       //a function to show the number of cups of each size sold (At any time show the total number of cups of each size sold.)
-int ouncesSold();      //a function to show the total amount of coffee sold (At any time show the total amount of coffee sold.)
-int moneyMade();       //a function to show the total money made (assume the profit on all sales is 25%.) (At any time show the total money made.)
-int shopProgram(int pUserSelection);      //program should be Menu Driven (Write a menu-driven program that will make the coffee shop operational.)
-
-// Will require some type of loop to allow the user to continue to sell coffee until they enter some selection to quit the program. 
-// Once the program is stopped, the day's sales totals will be displayed: Amount of money generated that day as well as a count of each size of coffee sold.
-
-// small (9 oz) at $1.75, medium (12 oz) at $1.90, and large (15 oz) at $2.00. 
+//a function to show the user how to use the program,
+void mainMenu(); 
+void showMenu();
+//a function to sell coffee, (Buy coffee in any size and in any number of cups.)
+void coffeeSales(); 
+//a function to show the number of cups of each size sold (At any time show the total number of cups of each size sold.)
+void sizesSold();
+//a function to show the total amount of coffee sold (At any time show the total amount of coffee sold.)
+void currentSold(); 
+void totalCupsSold();
+void totalOunceSold();
+//a function to show the total money made (assume the profit on all sales is 25%.) (At any time show the total money made.)
+void totalSales(); 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 int main()
 {
-int userSelection = 0;
-userSelection = shopProgram(userSelection);
-while ((userSelection < 7) && (userSelection != 0))
+    // Will require some type of loop to allow the user to continue to sell coffee until they enter some selection to quit the program. 
+	do {
+		mainMenu();
+		cout << "Return to main menu? Enter (Y) for YES" << endl;
+		cin >> userChoice;
+	} while (userChoice == 'y' || userChoice == 'Y');
+    // Once the program is stopped, the day's sales totals will be displayed: Amount of money generated that day as well as a count of each size of coffee sold.
+    totalSales();
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void mainMenu()
 {
-    switch (userSelection)
-    {
-        case 1:
-            //systemIntro();
-            cout << "Intro TBD..." << endl;
-            break;
-        case 2:
-            coffeePOS();
-            break;
-        case 3:
-            //displayMenu(); 
-            cout << "displayMenu TBD..." << endl;
-            break;
-        case 4:
-            //sizesSold(); 
-            cout << "sizesSold TBD..." << endl;
-            break;      
-        case 5:
-            //ouncesSold();
-            cout << "ouncesSold TBD..." << endl;
-            break;   
-        case 6:
-            //moneyMade();
-            cout << "moneyMade TBD..." << endl;
-            break;    
-        default:
-            cout << "Program exited." << endl;
-            break;
+	cout << fixed << setprecision(2) << endl;
+    cout << "*******************************************" << endl;
+    cout << "***** Sam's Beach Coffee Sales System *****" << endl;
+    cout << "*******************************************" << endl;
+	cout << "Please select which option you would like." << endl;
+	cout << "1) Sell The Customer Some Coffee" << endl;
+    cout << "2) Display The Current Menu" << endl;
+	cout << "3) Display Total Sizes Sold" << endl;
+	cout << "4) Display Total Cups Sold" << endl;
+    cout << "5) Display Total Ounces Sold" << endl;
+	cout << "6) Display Today's Sales and Profit" << endl;
+	cout << "Your choice : ";
+	cin >> userChoice;
+	cout << endl;
+//-------------------------
+	switch (userChoice)
+	{
+	case '1':
+		coffeeSales();
+		currentSold();
+		break;
+	case '2':
+		showMenu();
+		break;
+	case '3':
+		sizesSold();
+		break;   
+	case '4':
+		totalCupsSold();
+		break;
+	case '5':
+		totalOunceSold();
+		break;
+	case '6':
+		totalSales();
+		break;
+	default:
+		cout << "Please select a number between 1 and 6. " << endl;
+	}
 }
-}
-
-switch (userSelection)
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void coffeeSales()
 {
-case 1:
-    //systemIntro();
-    break;
-case 2:
-    coffeePOS();
-    break;
-case 3:
-    //displayMenu(); 
-    break;
-case 4:
-    //sizesSold(); 
-    break;      
-case 5:
-    //ouncesSold();
-    break;   
-case 6:
-    //moneyMade();
-    break;    
-default:
-    cout << "Program exited." << endl;
-    break;
+	cout << "Small Coffee: $" << showpoint << setprecision(2) << smallCup << endl;
+	cout << "Medium Coffee: $" << showpoint << setprecision(2) << mediumCup << endl;
+	cout << "Large Coffee: $" << showpoint << setprecision(2) << largeCup << endl;
+	cout << endl;
+	cout << "Please enter the number of each size the customer wants: ";
+	cout << endl;
+	cout << "Number of Small Coffee: ";
+	cin >> small;
+	cout << "Number of Medium Coffee: ";
+	cin >> medium;
+	cout << "Number of Large Coffee: ";
+	cin >> large;
+	cout << endl;
+//---------------------
+	totalSmall += small;
+	totalMedium += medium;
+	totalLarge += large;
 }
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void showMenu()
+{
+    cout << "***********************************" << endl;
+    cout << "***** Sam's Beach Coffee Menu *****" << endl;
+    cout << "***********************************" << endl;
+	cout << "   Small Coffee:           $" << showpoint << setprecision(2) << smallCup << endl;
+	cout << "   Medium Coffee:          $" << showpoint << setprecision(2) << mediumCup << endl;
+	cout << "   Large Coffee:           $" << showpoint << setprecision(2) << largeCup << endl;
+	cout << endl;
 }
-
-//---------------------------------------------------------------------------------------------------
-int shopProgram(int pUserSelection){
-cout << " " << endl;    
-cout << "******************************************" << endl;
-cout << "*** 'Sam's Beach Coffee' Sales-System  ***" << endl;
-cout << "******************************************" << endl;
-cout << " " << endl;
-cout << "Please make a selection: " << endl;
-cout << "1) System Instructions" << endl;
-cout << "2) Coffee Point of Sale" << endl;
-cout << "3) Display The Menu" << endl;
-cout << "4) Total Cups Sold" << endl;
-cout << "5) Total Coffee Sold (ounces)" << endl;
-cout << "6) Total Profit Made (profit = 25'%' of sales)"  << endl;
-cout << "0) Exit the Program" << endl;
-
-cin >> pUserSelection;
-return pUserSelection;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void sizesSold()
+{
+	cout << "Total number of small coffee cups sold : " << totalSmall << endl;
+	cout << "Total number of medium coffee cups sold : " << totalMedium << endl;
+	cout << "Total number of large coffee cups sold : " << totalLarge << endl;
+	cout << endl;
 }
-//---------------------------------------------------------------------------------------------------
-int coffeePOS(){
-
-    int smallCount;
-    int mediumCount;
-    int largeCount;
-    int sizeChoice;
-    int countChoice;
-    bool keepSelling = 1;
-
-    while (keepSelling)
-    {
-        cout << "What size coffee would the customer like?" << endl;
-        cout << "1) Small (9oz)" << endl;
-        cout << "2) Medium (12oz)" << endl;
-        cout << "3) Large (15oz)" << endl;
-        cin >> sizeChoice;
-        switch (sizeChoice){
-            case 1:
-                cout << "How many small coffees does the customer want?" << endl;
-                cin >> countChoice;
-                smallCount =  smallCount + sizeChoice;
-                break;
-            case 2:
-                cout << "How many medium coffees does the customer want?" << endl;
-                cin >> countChoice;
-                mediumCount = mediumCount + sizeChoice;
-                break;
-            case 3:
-                cout << "How many large coffees does the customer want?" << endl;
-                cin >> countChoice;
-                largeCount = largeCount + sizeChoice;
-                break;  
-            default:
-                cout << "Program exited." << endl;
-                break;
-            }
-    }
-    
-
-return 0;
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void currentSold()
+{
+	
+	moneyMade += small * smallCup;
+	moneyMade += medium * mediumCup;
+	moneyMade += large * largeCup;
+//---------------------
+	int totalCoffeeSold = small + medium + large;
+	cout << "The number of coffee cups sold is : " << totalCoffeeSold << endl;
+	cout << "Money earned is : $" << showpoint << moneyMade << endl;
+	cout << endl;
+//---------------------
+	small = 0;
+	medium = 0;
+	large = 0;
 }
-
-//---------------------------------------------------------------------------------------------------
-
-
-//---------------------------------------------------------------------------------------------------
-
-
-//---------------------------------------------------------------------------------------------------
-
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void totalCupsSold()
+{
+    int totalSold = totalSmall + totalMedium + totalLarge;
+	cout << "The total number of coffee cups sold is : " << totalSold << endl;
+	cout << endl;
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void totalOunceSold()
+{
+    //            small (9 oz)     medium (12 oz)     large (15 oz)
+	int ounces = (totalSmall*9) + (totalMedium*12) + (totalLarge*15);
+	cout << "The total amount of coffee sold in ounces is: " << ounces << "oz." << endl;
+	cout << endl;
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+void totalSales()
+{
+	double moneySales = 0;
+	moneySales += totalSmall * smallCup;
+	moneySales += totalMedium * mediumCup;
+	moneySales += totalLarge * largeCup;
+    //a function to show the total money made (assume the profit on all sales is 25%.)
+	cout << "Total Sales $" << showpoint << moneySales << endl;
+    cout << "Total Profit $" << showpoint << (moneySales*.25) << endl;
+    cout << endl;
+    int ounces = (totalSmall*9) + (totalMedium*12) + (totalLarge*15);
+	cout << "The total amount of coffee sold in ounces is: " << ounces << "oz." << endl;
+    int totalSold = totalSmall + totalMedium + totalLarge;
+	cout << "The total number of coffee cups sold is : " << totalSold << endl;
+    cout << endl;
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------

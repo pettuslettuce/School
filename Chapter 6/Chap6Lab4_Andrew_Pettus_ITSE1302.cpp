@@ -35,20 +35,17 @@ Welcome to the Programming 1 Calculator - please enter your selection or enter 0
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
-
+//-------------------------------------------------------------------------------------------------------------------------
 int add (int,int);//Add two integer numbers
 int add (int,int,int);//Add three integer numbers
 double add (double,double);//Add two double numbers
 double add (double,double,double);//Add three double numbers
 int calcPromt(int pUserSelection);//"You will also need to create a function to display the Menu (choices) to the user."
-
+//-------------------------------------------------------------------------------------------------------------------------
 int main()
 {
-
 int userSelection = 0;
 userSelection = calcPromt(userSelection);
-
 switch (userSelection)
 {
 case 1:
@@ -73,10 +70,9 @@ default:
     cout << "Program exited." << endl;
     break;
 }
-
 return 0;
 }
-//------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 int add (int firstA, int firstB){
 cout << "************************"<< endl;
 cout << "**  ADD TWO INTEGERS  **"<< endl;
@@ -89,7 +85,7 @@ cin >> firstB;
 cout << "Your two integers when summed equal: ";
 return firstA + firstB;
 }
-//------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 int add (int secondA, int secondB, int secondC){
 cout << "************************"<< endl;
 cout << "** ADD THREE INTEGERS **"<< endl;
@@ -104,7 +100,7 @@ cin >> secondC;
 cout << "Your three integers when summed equal: ";
 return secondA + secondB + secondC;
 }
-//------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 double add (double thirdA, double thirdB){
 cout << "************************"<< endl;
 cout << "**  ADD TWO DOUBLES   **"<< endl;
@@ -117,7 +113,7 @@ cin >> thirdB;
 cout << "Your two doubles when summed equal: ";
 return thirdA + thirdB;
 }
-//------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 double add (double fourthA, double fourthB, double fourthC){
 cout << "************************"<< endl;
 cout << "** ADD THREE DOUBLES  **"<< endl;
@@ -132,7 +128,7 @@ cin >> fourthC;
 cout << "Your three doubles when summed equal: ";
 return fourthA + fourthB + fourthC;
 }
-//------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 int calcPromt(int pUserSelection){
 cout << "****************************************************************************************************"<< endl;
 cout << "**   Welcome to the Programming 1 Calculator! - Please enter your selection or enter 0 to exit.   **" << endl;

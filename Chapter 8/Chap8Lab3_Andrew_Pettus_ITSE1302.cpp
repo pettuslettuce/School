@@ -10,7 +10,7 @@ A sample output is:
 Candidate                       Votes Received          % of Total Vote
 
 Faye Kitt-Knightley                 5000                    25.91
-Benedict Buttryingtobenicer         4000                    20.73
+Benedict Tryntobenicer         4000                    20.73
 Arthur Anymoredonuts                6000                    31.09
 Oswald Thatendswald                 2500                    12.95
 Lars Lars Pantsonfars               1800                     9.33

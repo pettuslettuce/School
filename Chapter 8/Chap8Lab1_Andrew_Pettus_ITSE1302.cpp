@@ -22,9 +22,52 @@ Student Average
 #include <iomanip>
 using namespace std;
 
+
+
+double computeAverage (int & [], int & pArray);
+void displayGrades(int &);
+const int ARRAY_SIZE = 5;
+int studentGrades[ARRAY_SIZE];
+string studentName[ARRAY_SIZE];
+
 int main(){
 
-    
+    //use for loop to ask for the names
+
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        cout << "Please enter the name of the student: " << endl;
+        cin >> studentName[i];
+        cout << "Please enter the score " << studentName[i] << " received on the test: " << endl;
+        cin >> studentGrades[i];
+    }
+
+
+    cout << showpoint << fixed << setprecision(2);
+    cout << "The test scores are as follows: " << endl;
+    cout << displayGrades(studentGrades);
+    cout << "Average test score: " << computeAverage(studentGrades) << endl;
 return 0;
+}
+
+double computeAverage(int & pArray[])
+{
+    int mySum = 0;
+    double myAvg = 0.0;
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+       mySum += pArray[i];
+    }
+    myAvg = static_cast<double>(mySum) / ARRAY_SIZE;
+    return myAvg;
+    
+}
+
+void displayGrades(int&)
+{
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        cout << studentName[i] << "'s test score was: " << studentGrades[i] << endl;
+    }    
 }
 

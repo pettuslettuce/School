@@ -26,9 +26,35 @@ Car: Tundra
 #include <iomanip>
 using namespace std;
 
+const int ARRAY_SIZE = 5;
+
+string carName[ARRAY_SIZE] = {"Fork Fission", "Superoo Impressive", "Shevy Chase", "Hondo Acrid", "Owdi PP"};
+double carMPG[ARRAY_SIZE] = {25.4,34.1, 14.5, 31.1, 19.2};
+
+void carReport (string carName[], double carMPG[]);
+
 int main(){
 
+carReport(carName,carMPG);
 
 return 0;
+}
+
+void carReport (string carName[], double carMPG[]){
+
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        cout << "Car: " << carName[i] << endl;
+        cout << "MPG: " << carMPG[i] << endl;
+        if (carMPG[i] < 30.0)
+        {
+            cout << "That's a gas guzzler!" << endl;
+        }
+        else if (carMPG[i] >= 30.0)
+        {
+            cout << "That's economical!" << endl;
+        }       
+    }
+
 }
 

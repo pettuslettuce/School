@@ -40,7 +40,7 @@ int main(){
     //use for loop to ask for the grades
     for (int i = 0; i < ARRAY_SIZE; i++)
     {
-        cout << "Please enter the scores " << studentName << " received on test " << (i + 1) << endl;
+        cout << "Please enter the score " << studentName << " received on test " << (i + 1) << ": " << endl;
         cin >> studentGrades[i];
     }
 
@@ -68,7 +68,7 @@ void displayGrades(int [])
 
     for (int i = 0; i < ARRAY_SIZE; i++)
     {
-        cout << studentName << "'s score for test number " << (i + 1)<< " is " << studentGrades[i] << endl;
+        cout << studentName << "'s score for test number " << (i + 1)<< " is: " << studentGrades[i] << endl;
     }
-    cout << "Average test score: " << computeAverage(studentGrades) << endl;
+    cout << studentName << "'s average test score is: " << computeAverage(studentGrades) << endl;
 }

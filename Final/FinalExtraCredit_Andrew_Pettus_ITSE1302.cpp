@@ -18,7 +18,7 @@ struct carDetails
 };
 
 //Create a function that will display the entire inventory of the car lot
-void lotInventory(
+void lotInventory(carDetails[], int);
 //Create a function that will show the total value of all of the car lots inventory (Total of all cars.)
     //void lotValue(carDetails);
 
@@ -26,7 +26,7 @@ int main()
 {
     //Create an Array of 5 Car structures (you can pre-populate the data)
     
-    carDetails decemberInventory[ARRAY_SIZE] = 
+    carDetails inventory[ARRAY_SIZE] = 
     {
         {"Fork", "Fission", 2013, 14999},
         {"Superoo", "Impressive", 2018, 23000},
@@ -35,12 +35,12 @@ int main()
         {"Edison", "Elephant", 1903, 34999}
     };
     
-    lotInventory(
+    lotInventory(inventory, ARRAY_SIZE);
 
 
 }
 
-void lotInventory(
+void lotInventory(carDetails pCar[], int pSize)
 {
     cout << "************************************ " << endl;
     cout << "Sleazy Sam's Used Car Lot Inventory: " << endl;

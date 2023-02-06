@@ -1,3 +1,4 @@
+
 public class Pet {
     // class variables
     private String petName;
@@ -5,18 +6,21 @@ public class Pet {
     private String petSound;
 
     // constructors
-    public Pet(String petName, String petType, String petSound) {
-        super();
-        this.petName = petName;
-        this.petType = petType;
-        this.petSound = petSound;
-    }
 
+    // Default constructor
     public Pet() {
         super();
         this.petName = "Unknown Pet Name";
         this.petType = "Unknown Pet Type";
         this.petSound = "Unknown Pet Sound";
+    }
+
+    // Populated constructor
+    public Pet(String petName, String petType, String petSound) {
+        super();
+        this.petName = petName;
+        this.petType = petType;
+        this.petSound = petSound;
     }
 
     // getters setters
@@ -46,11 +50,12 @@ public class Pet {
 
     // class methods - function creates a string with labels and object data
 
-    public String PrintInfo()
-    {
+    public String PrintInfo() {
         String myReturn = "";
-        myReturn = "Name: " + this.getPetName() + " " + this.getPetType() + " "
-
+        myReturn = "Name: " + this.getPetName() + "\n";
+        myReturn += "Type: " + this.getPetType() + "\n";
+        myReturn += "Sound: " + this.getPetSound() + "\n";
+        return myReturn;
     }
 
 }

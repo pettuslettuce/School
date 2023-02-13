@@ -66,7 +66,7 @@ public class Employee {
 
         public String PrintInfo() {
             String myReturn = "";
-            myReturn = "Employee " + this.getIdNumber() + " Information: \n";
+            myReturn = "\nEmployee " + this.getIdNumber() + " Information: \n";
             myReturn += "First Name: " + this.getFirstName() + "\n";
             myReturn += "Last Name: " + this.getLastName() + "\n";
             myReturn += "ID Number: " + this.getIdNumber() + "\n";

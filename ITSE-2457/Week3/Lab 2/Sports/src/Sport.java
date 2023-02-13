@@ -54,7 +54,7 @@ public class Sport {
     public void setTeamLosses(int teamLosses) {
         this.teamLosses = teamLosses;
     }
-    public double getWinPercentage(int teamWins, int teamLosses){
+    public double getWinPercentage(){
         double dblTeamWins = (double) teamWins;
         double dblTeamLosses = (double) teamLosses;
         double teamPercentage = (double)(dblTeamWins/(dblTeamWins+dblTeamLosses));
@@ -67,7 +67,7 @@ public class Sport {
         myReturn += "Player Count: " + this.getTeamPlayers() + "\n";
         myReturn += "Win Count: " + this.getTeamWins() + "\n";
         myReturn += "Loss Count: " + this.getTeamLosses() + "\n";
-        myReturn += "Win Percentage: " + this.getWinPercentage(teamWins, teamLosses) + "%\n";
+        myReturn += "Win Percentage: " + this.getWinPercentage() + "%\n";
         return myReturn;
 
 }

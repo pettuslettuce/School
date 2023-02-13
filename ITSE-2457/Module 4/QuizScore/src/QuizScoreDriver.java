@@ -1,3 +1,4 @@
+
 /*
  * ITSE-2457; OOP Java; M/W 2pm
  * Written by Andrew Pettus
@@ -6,23 +7,23 @@
  * Quiz Score
  */
 import java.util.Scanner;
+
 public class QuizScoreDriver {
     public static void main(String[] args) throws Exception {
-        //Driver attributes
+        // Driver attributes
         String studentName;
         double scoreOne;
         double scoreTwo;
         double scoreThree;
-        //Instantiate keyboard scanner
+        // Instantiate keyboard scanner
         Scanner userInput = new Scanner(System.in);
-        //Instantiate default QuizScore constructor
+        // Instantiate default QuizScore constructor
         QuizScore studentOne = new QuizScore();
-        //Collect student name from user
-        System.out.println
-        ("Student Quiz Grader: \n\n Please enter the student's name: ");
+        // Collect student name from user
+        System.out.println("Student Quiz Grader: \n\n Please enter the student's name: ");
         studentName = userInput.nextLine();
         studentOne.setStudentName(studentName);
-        //Collect three quiz scores from user:
+        // Collect three quiz scores from user:
         System.out.printf("Please enter %s's first quiz score:", studentOne.getStudentName());
         scoreTwo = userInput.nextDouble();
         studentOne.setScoreOne(scoreTwo);
@@ -32,12 +33,10 @@ public class QuizScoreDriver {
         System.out.printf("Please enter %s's third quiz score:", studentOne.getStudentName());
         scoreThree = userInput.nextDouble();
         studentOne.setScoreThree(scoreThree);
-        
+        // Output method for student and quiz information
+        System.out.println(studentOne.PrintInfo());
+        // Close Scanner
+        userInput.close();
 
-
-
-
-
-        
     }
 }

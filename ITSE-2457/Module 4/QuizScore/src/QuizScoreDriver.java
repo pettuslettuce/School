@@ -1,4 +1,3 @@
-
 /*
  * ITSE-2457; OOP Java; M/W 2pm
  * Written by Andrew Pettus
@@ -20,7 +19,7 @@ public class QuizScoreDriver {
         // Instantiate default QuizScore constructor
         QuizScore studentOne = new QuizScore();
         // Collect student name from user
-        System.out.println("Student Quiz Grader: \n\n Please enter the student's name: ");
+        System.out.println("Student Quiz Grader: \n\nPlease enter the student's name: ");
         studentName = userInput.nextLine();
         studentOne.setStudentName(studentName);
         // Collect three quiz scores from user:

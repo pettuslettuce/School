@@ -5,6 +5,9 @@
  * Module 4 Lab 1
  * Quiz Score
  */
+
+//Import decimal formatter
+import java.text.DecimalFormat;
 //Design a QuizScore class that has fields to hold three quiz scores.  
 public class QuizScore {
     // quiz score fields
@@ -28,6 +31,9 @@ public class QuizScore {
         this.scoreTwo = -1;
         this.scoreThree = -1;
     }
+
+    // create a DecimalFormatter object with the desired format
+    DecimalFormat formatter = new DecimalFormat("#,##0.00");
 
     // The class should also have accessor methods for the quiz score fields
     public String getStudentName() {
@@ -119,7 +125,7 @@ public class QuizScore {
         myReturn += "Quiz One: " + this.getScoreOne() + "\n";
         myReturn += "Quiz Two: " + this.getScoreTwo() + "\n";
         myReturn += "Quiz Three: " + this.getScoreThree() + "\n";
-        myReturn += "Quiz Averages: " + this.getAverageTestScore() + "\n";
+        myReturn += "Quiz Averages: " + formatter.format(this.getAverageTestScore()) + "\n";
         myReturn += "Final Letter Grade: " + this.getLetterGrade(getAverageTestScore()) + "\n";
         return myReturn;
     }

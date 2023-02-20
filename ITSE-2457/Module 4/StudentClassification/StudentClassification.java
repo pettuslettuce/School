@@ -61,9 +61,9 @@ public class StudentClassification {
         if (studentHours >= 90) {
             classification = "Senior";
         } else if (studentHours >= 60) {
-            classification = "Junior ";
+            classification = "Junior";
         } else if (studentHours >= 30) {
-            classification = "Sophomore ";
+            classification = "Sophomore";
         } else if (studentHours >= 0) {
             classification = "Freshman";
         }
@@ -72,10 +72,15 @@ public class StudentClassification {
 
     public String PrintInfo() {
         String myReturn = "";
-        myReturn = "\nWith " + getStudentHours() + " hours " + getStudentFirstName() + " " + getStudentLastName()
+        myReturn = "\nWith " 
+                + getStudentHours() 
+                + " hours " 
+                + getStudentFirstName() 
+                + " " 
+                + getStudentLastName()
                 + " is a "
                 + getStudentClassification()
-                + "\n";
+                + ".\n";
         return myReturn;
     }
 }

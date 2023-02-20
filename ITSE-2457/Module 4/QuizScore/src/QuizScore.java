@@ -107,13 +107,13 @@ public class QuizScore {
         char letterGrade = 'x';
         if (testAverage >= 90) {
             letterGrade = 'A';
-        } else if (testAverage >= 80 && testAverage <= 89) {
+        } else if (testAverage >= 80) {
             letterGrade = 'B';
-        } else if (testAverage >= 70 && testAverage <= 79) {
+        } else if (testAverage >= 70) {
             letterGrade = 'C';
-        } else if (testAverage >= 60 && testAverage <= 69) {
+        } else if (testAverage >= 60) {
             letterGrade = 'D';
-        } else if (testAverage >= 50 && testAverage <= 59) {
+        } else if (testAverage >= 50) {
             letterGrade = 'F';
         }
         return (letterGrade);

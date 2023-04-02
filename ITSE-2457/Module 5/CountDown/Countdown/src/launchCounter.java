@@ -1,3 +1,10 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Feb 27 2023
+ * Module 5 Lab 1
+ * Launch Counter
+ */
 public class launchCounter {
     public static void main(String[] args) throws Exception {
         int doCounter = 10;

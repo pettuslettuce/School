@@ -1,0 +1,88 @@
+
+
+public class Doctor extends MedicalProvider {
+    private String specialty;
+    private String licenseNumber;
+    private String roomNumber;
+    private double yearlySalary;
+
+    public Doctor() {
+        super();
+        this.specialty = "";
+        this.licenseNumber = "";
+        this.roomNumber = "";
+        this.yearlySalary = 0.0;
+    }
+
+    public Doctor(String firstName, String lastName, String employeeID, OfficeLocation employeeOfficeLocation, String specialty, String licenseNumber, String roomNumber, double yearlySalary) {
+        super(firstName, lastName, employeeID, employeeOfficeLocation);
+        this.specialty = specialty;
+        this.licenseNumber = licenseNumber;
+        this.roomNumber = roomNumber;
+        this.yearlySalary = yearlySalary;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
+    }
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
+
+    public String getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public double getYearlySalary() {
+        return yearlySalary;
+    }
+
+    public void setYearlySalary(double yearlySalary) {
+        this.yearlySalary = yearlySalary;
+    }
+
+    @Override
+    public String toPayrollString() {
+        String payrollString = String.format("%s, %s, %s %s, %s, %s, %s, %s, %.2f",
+                this.getEmployeeID(),
+                this.getSpecialty(),
+                this.getFirstName(),
+                this.getLastName(),
+                this.getEmployeeOfficeLocation().getAddress(),
+                this.getEmployeeOfficeLocation().getCity(),
+                this.getEmployeeOfficeLocation().getState(),
+                this.getEmployeeOfficeLocation().getZip(),
+                this.calculateWeeklyGrossPay()
+        );
+        return payrollString;
+    }
+    
+
+    public double calculateWeeklyGrossPay() {
+        double weeklyGrossPay = this.yearlySalary / 52.0;
+        return weeklyGrossPay;
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Specialty: " + this.getSpecialty());
+        System.out.println("License Number: " + this.getLicenseNumber());
+        System.out.println("Room Number: " + this.getRoomNumber());
+        System.out.println("Yearly Salary: " + this.getYearlySalary());
+        System.out.println("Weekly Gross Pay: " + this.calculateWeeklyGrossPay());
+    }
+}

@@ -52,8 +52,10 @@ public abstract class MedicalProvider implements PayrollExport {
     public void printInfo() {
         System.out.println("Employee ID: " + this.getEmployeeID());
         System.out.println("Name: " + this.getFirstName() + " " + this.getLastName());
-        System.out.println("Office Location: " + this.getEmployeeOfficeLocation().getAddress() + ", " +
-                this.getEmployeeOfficeLocation().getCity() + ", " + this.getEmployeeOfficeLocation().getState() + " " +
+        System.out.println("Office Location: " + 
+                this.getEmployeeOfficeLocation().getAddress() + ", " +
+                this.getEmployeeOfficeLocation().getCity() + ", " + 
+                this.getEmployeeOfficeLocation().getState() + " " +
                 this.getEmployeeOfficeLocation().getZip());
     }
     

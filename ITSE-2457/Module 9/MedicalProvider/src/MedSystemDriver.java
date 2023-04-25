@@ -34,12 +34,12 @@ public class MedSystemDriver {
         // Read and display contents of file
         try {
             File fileIn = new File("Medical.csv");
-            Scanner scanner = new Scanner(fileIn);
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
+            Scanner inputScan = new Scanner(fileIn);
+            while (inputScan.hasNextLine()) {
+                String line = inputScan.nextLine();
                 System.out.println(line);
             }
-            scanner.close();
+            inputScan.close();
         } catch (IOException error) {
             System.out.println("An error occurred while reading the file: " + error.getMessage());
         }

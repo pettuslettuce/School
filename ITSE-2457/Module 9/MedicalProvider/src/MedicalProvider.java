@@ -1,3 +1,12 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Apr 25 2023
+ * Module 9 Lab 3
+ * MedicalSystem MedicalProvider Class
+ */
+
+// Medical Provider - Displays Provider Information and Office Location
 
 // abstract class since it's not being instantiaed; PayrollExport being implemented and given to child classes
 public abstract class MedicalProvider implements PayrollExport {
@@ -48,7 +57,7 @@ public abstract class MedicalProvider implements PayrollExport {
         this.employeeOfficeLocation = employeeOfficeLocation;
     }
     
-    //print info method
+    //MedicalProvider printInfo
     public void printInfo() {
         System.out.println("Employee ID: " + this.getEmployeeID());
         System.out.println("Name: " + this.getFirstName() + " " + this.getLastName());
@@ -59,7 +68,4 @@ public abstract class MedicalProvider implements PayrollExport {
                 this.getEmployeeOfficeLocation().getZip());
     }
     
-    // override pay
-    @Override
-    public abstract String toPayrollString();
 }

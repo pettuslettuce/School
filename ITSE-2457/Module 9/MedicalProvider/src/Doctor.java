@@ -1,4 +1,13 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Apr 25 2023
+ * Module 9 Lab 3
+ * MedicalSystem Doctor Class
+ */
 
+//Displays Doctor information to include the PrintInfo from the parent class
+//Displays Weekly Gross Pay (note this is calculated based on Annual Salary)
 
 public class Doctor extends MedicalProvider {
     private String specialty;
@@ -6,6 +15,7 @@ public class Doctor extends MedicalProvider {
     private String roomNumber;
     private double yearlySalary;
 
+     //no arg constructor
     public Doctor() {
         super();
         this.specialty = "";
@@ -14,6 +24,7 @@ public class Doctor extends MedicalProvider {
         this.yearlySalary = 0.0;
     }
 
+    //populated constructor
     public Doctor(String firstName, String lastName, String employeeID, OfficeLocation employeeOfficeLocation, String specialty, String licenseNumber, String roomNumber, double yearlySalary) {
         super(firstName, lastName, employeeID, employeeOfficeLocation);
         this.specialty = specialty;
@@ -22,10 +33,10 @@ public class Doctor extends MedicalProvider {
         this.yearlySalary = yearlySalary;
     }
 
+    //gettersetters
     public String getSpecialty() {
         return specialty;
     }
-
     public void setSpecialty(String specialty) {
         this.specialty = specialty;
     }
@@ -33,7 +44,6 @@ public class Doctor extends MedicalProvider {
     public String getLicenseNumber() {
         return licenseNumber;
     }
-
     public void setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
     }
@@ -41,7 +51,6 @@ public class Doctor extends MedicalProvider {
     public String getRoomNumber() {
         return roomNumber;
     }
-
     public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
@@ -49,12 +58,18 @@ public class Doctor extends MedicalProvider {
     public double getYearlySalary() {
         return yearlySalary;
     }
-
     public void setYearlySalary(double yearlySalary) {
         this.yearlySalary = yearlySalary;
     }
 
-    @Override
+
+    //calculate weekly gross
+    public double calculateWeeklyGrossPay() {
+        double weeklyGrossPay = this.yearlySalary / 52.0;
+        return weeklyGrossPay;
+    }
+
+    //overriding abstract function from PayrollExport interface
     public String toPayrollString() {
         String payrollString = String.format("%s, %s, %s %s, %s, %s, %s, %s, %.2f",
                 this.getEmployeeID(),
@@ -70,12 +85,7 @@ public class Doctor extends MedicalProvider {
         return payrollString;
     }
     
-
-    public double calculateWeeklyGrossPay() {
-        double weeklyGrossPay = this.yearlySalary / 52.0;
-        return weeklyGrossPay;
-    }
-
+    //overriding printInfo class from abstracted MedicalProvider class
     @Override
     public void printInfo() {
         super.printInfo();

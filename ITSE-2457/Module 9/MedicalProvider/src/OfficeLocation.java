@@ -1,3 +1,12 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Apr 25 2023
+ * Module 9 Lab 3
+ * MedicalSystem OfficeLocation Class
+ */
+
+//Office Location - Displays Location information and Phone Number
 class OfficeLocation {
     // Private instance variables
     private String officeName;
@@ -7,11 +16,11 @@ class OfficeLocation {
     private String zip;
     private String phone;
 
-    // Constructor with no arguments
+    //no arg constructor
     public OfficeLocation() {
     }
 
-    // Constructor with arguments
+    //populated constructor
     public OfficeLocation(String officeName, String address, String city, String state, String zip, String phone) {
         this.officeName = officeName;
         this.address = address;
@@ -64,6 +73,7 @@ class OfficeLocation {
         this.phone = phone;
     }
 
+    //OfficeLocation printInfo
     public void printInfo() {
         System.out.println(officeName);
         System.out.println(address);

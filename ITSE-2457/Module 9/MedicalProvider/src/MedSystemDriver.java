@@ -1,3 +1,19 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Apr 25 2023
+ * Module 9 Lab 3
+ * MedicalSystem Driver
+ */
+
+/*
+ * The Driver Class can call the parameterized Constructor - 
+ * you do not need to get user input for the Driver class. 
+ * The Driver class will need use an ArrayList to hold 4 MedicalProviders (polymorphism) 2 doctors and 2 nurses. 
+ * Once the program was written the file, it will read the contents of the file and display it on the screen 
+ */
+
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

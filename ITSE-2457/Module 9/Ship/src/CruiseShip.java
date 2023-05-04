@@ -1,21 +1,30 @@
+/*
+ * ITSE-2457; OOP Java; M/W 2pm
+ * Written by Andrew Pettus
+ * Apr 25 2023
+ * Module 9 Lab 3
+ * CruiseShip Class
+ */
+
 // CruiseShip class representing a cruise ship, extending the Ship class
 class CruiseShip extends Ship {
-    // Fields
-    private int maxPassengers; // Field for the maximum number of passengers (an int)
 
-    // Constructor
+     // Field for the maximum number of passengers (an int)
+    private int maxPassengers;
+
+    // A constructor...
     public CruiseShip(String name, String yearBuilt, int maxPassengers) {
         // Call the constructor of the base class (Ship) with the name and yearBuilt arguments
         super(name, yearBuilt);
         this.maxPassengers = maxPassengers;
     }
 
-    // Accessor (getter)
+    //...and appropriate accessors...
     public int getMaxPassengers() {
         return maxPassengers;
     }
 
-    // Mutator (setter)
+    //... and mutators
     public void setMaxPassengers(int maxPassengers) {
         this.maxPassengers = maxPassengers;
     }

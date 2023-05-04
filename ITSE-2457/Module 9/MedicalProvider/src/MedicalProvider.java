@@ -66,6 +66,7 @@ public abstract class MedicalProvider implements PayrollExport {
                 this.getEmployeeOfficeLocation().getCity() + ", " + 
                 this.getEmployeeOfficeLocation().getState() + " " +
                 this.getEmployeeOfficeLocation().getZip());
+        
     }
     
 }

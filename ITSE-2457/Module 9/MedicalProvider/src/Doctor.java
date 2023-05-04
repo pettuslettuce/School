@@ -94,5 +94,6 @@ public class Doctor extends MedicalProvider {
         System.out.println("Room Number: " + this.getRoomNumber());
         System.out.println("Yearly Salary: " + this.getYearlySalary());
         System.out.println("Weekly Gross Pay: " + this.calculateWeeklyGrossPay());
+        System.out.println("****************************************************");
     }
 }

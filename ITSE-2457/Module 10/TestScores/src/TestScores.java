@@ -12,34 +12,34 @@
 import java.util.ArrayList;
 
 public class TestScores {
-    // Declare an ArrayList object to store the test scores
+    // initiailze an array list to store the scores
     private ArrayList<Integer> scores;
 
-    // Constructor: initializes the scores ArrayList object
+    // constructor to initialize the ArrayList object named 'scores'
     public TestScores() {
         this.scores = new ArrayList<Integer>();
     }
 
-    // Method to add a new score to the scores ArrayList
+    // processing to add new score to the aray list
     public void addScore(int score) {
-        // Check if the score is valid (between 0 and 100)
+        // check if the score is valid (between 0 and 100)
         if (score < 0 || score > 100) {
-            // Throw an exception if the score is invalid
+            // throw an exception if the score is invalid
             throw new IllegalArgumentException("Invalid test score of: " + score + ". Enter score under 100 or enter -1 to quit.");
         }
-        // Add the score to the scores ArrayList
+        // add the score to the 'scores' ArrayList
         scores.add(score);
     }
 
-    // Method to calculate and return the average of the scores in the scores ArrayList
+    // processing to calculate and return the average of the scores in the scores ArrayList
     public double getAverage() {
-        // Initialize a variable to store the sum of the scores
+        // initialize a variable to store the sum of the scores
         int sum = 0;
-        // Loop through the scores ArrayList and add each score to the sum variable
+        // loop through the scores ArrayList and add each score to the sum variable
         for (int i = 0; i < scores.size(); i++) {
             sum += scores.get(i);
         }
-        // Calculate and return the average of the scores
+        // process and return the average of the scores
         return (double) sum / scores.size();
     }
 }

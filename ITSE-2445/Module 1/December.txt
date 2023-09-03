@@ -1,0 +1,6 @@
+The monthly expenses for December: 
+Rent:                  $ 1500.00
+Electric:              $   34.66
+Water:                 $   98.44
+--------------------------------
+Total:                 $ 1633.10

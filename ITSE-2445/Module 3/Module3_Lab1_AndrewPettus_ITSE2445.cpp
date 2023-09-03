@@ -61,7 +61,7 @@ int main() // main loop begin
         myHtmlFile << "  <tr>" << endl;
        for (int col = 1; col <= tableSize;  ++col)
        {
-        myHtmlFile << "    <td>" << row * col << "</td" << endl;
+        myHtmlFile << "    <td>" << row * col << "</td";
         cout << setw(4) << row * col;
        }
        // Move to next line after each row

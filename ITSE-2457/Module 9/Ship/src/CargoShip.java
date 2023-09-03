@@ -14,8 +14,7 @@ class CargoShip extends Ship {
 
     // A constructor...
     public CargoShip(String name, String yearBuilt, int cargoCapacity) {
-        // Call the constructor of the base class (Ship) with the name and yearBuilt
-        // arguments
+        // Call the constructor of the base class (Ship) with the name and yearBuilt arguments
         super(name, yearBuilt);
         this.cargoCapacity = cargoCapacity;
     }
@@ -33,8 +32,7 @@ class CargoShip extends Ship {
     // A toString method that displays the ship's name, year built, and cargo capacity
     @Override
     public String toString() {
-        // Call the toString method of the base class (Ship) and append the cargo
-        // capacity
-        return super.toString() + ", Cargo Capacity: " + cargoCapacity + " tons";
+        // Call the toString method of the base class (Ship) and append the cargo capacity
+        return super.toString() + ", Cargo Capacity: " + cargoCapacity;
     }
 }

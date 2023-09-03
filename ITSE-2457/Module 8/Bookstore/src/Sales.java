@@ -6,7 +6,6 @@
  * Sales Utility
  */
 
-
 import java.io.File;
 import java.util.Scanner;
 import java.text.NumberFormat;
@@ -14,7 +13,8 @@ import java.util.Locale;
 
 public class Sales {
 
-    // private static field used to store a NumberFormat object that formats numbers as currency in USD
+    // private static field used to store a NumberFormat object that formats numbers
+    // as currency in USD
     private static NumberFormat dollarFormatter = NumberFormat.getCurrencyInstance(Locale.US);
 
     public static void main(String[] args) {
@@ -27,9 +27,9 @@ public class Sales {
         printDayAverages(sales);
     }
 
-
     public static double[][] readSalesFromFile(String fileName) {
-        // Create a new 2D array of doubles with 3 rows (weeks) and 7 columns (days) to store sales data
+        // Create a new 2D array of doubles with 3 rows (weeks) and 7 columns (days) to
+        // store sales data
         double[][] sales = new double[3][7];
         try {
             // Create a new File object
@@ -38,13 +38,15 @@ public class Sales {
             Scanner fileScanner = new Scanner(fileText);
             // Initialize a row counter to keep track of which row in array to update
             int row = 0;
-            // Loop through each line in the file until there are no more lines or we have read 3 rows
+            // Loop through each line in the file until there are no more lines or we have
+            // read 3 rows
             while (fileScanner.hasNextLine() && row < 3) {
                 // Read the next line of data from the file
                 String line = fileScanner.nextLine();
                 // Split the line of data into an array of Strings using commas as splitter
                 String[] parts = line.split(",");
-                // Loop through each column of the current row and update the corresponding element in the array
+                // Loop through each column of the current row and update the corresponding
+                // element in the array
                 for (int col = 0; col < 7; col++) {
                     sales[row][col] = Double.parseDouble(parts[col]);
                 }
@@ -73,10 +75,12 @@ public class Sales {
                 // Add the current day's sales to the total
                 total += sales[row][col];
             }
-            // Print a message indicating the week number and its corresponding formatted total
+            // Print a message indicating the week number and its corresponding formatted
+            // total
             System.out.printf("Week %d: %s\n", row + 1, dollarFormatter.format(total));
         }
     }
+
     // New method, passing in 2D array named 'sales'
     public static void printWeekAverages(double[][] sales) {
         System.out.println("\nAverage daily sales for each week:");
@@ -91,41 +95,45 @@ public class Sales {
             }
             // Calculate the average for each week
             double average = total / 7;
-            // Print a message indicating the week number and its corresponding formatted total
+            // Print a message indicating the week number and its corresponding formatted
+            // total
             System.out.printf("Week %d: %s\n", row + 1, dollarFormatter.format(average));
         }
     }
+
     // New method, passing in 2D array named 'sales'
     public static void printTotalSales(double[][] sales) {
-    System.out.println("\nTotal sales for all 3 weeks:");
-    // Initialize a variable to keep track of the total sales
-    double total = 0.0;
-     // Loop through each row of the sales array
-    for (int row = 0; row < 3; row++) {
-        // Loop through each column of the current row
-        for (int col = 0; col < 7; col++) {
-            total += sales[row][col];
+        System.out.println("\nTotal sales for all 3 weeks:");
+        // Initialize a variable to keep track of the total sales
+        double total = 0.0;
+        // Loop through each row of the sales array
+        for (int row = 0; row < 3; row++) {
+            // Loop through each column of the current row
+            for (int col = 0; col < 7; col++) {
+                total += sales[row][col];
+            }
         }
+        System.out.println(dollarFormatter.format(total));
     }
-    System.out.println(dollarFormatter.format(total));
-    }
+
     // New method, passing in 2D array named 'sales'
     public static void printAllWeekAverages(double[][] sales) {
         System.out.println("\nAverage weekly sales for all 3 weeks:");
         // Initialize a variable to keep track of the total sales
         double total = 0.0;
-         // Loop through each row of the sales array
+        // Loop through each row of the sales array
         for (int row = 0; row < 3; row++) {
             // Loop through each column of the current row
             for (int col = 0; col < 7; col++) {
                 total += sales[row][col];
             }
             // Calculate the average for each week
-            
+
         }
         double average = total / 3;
         System.out.println(dollarFormatter.format(average));
-        }
+    }
+
     // New method, passing in 2D array named 'sales'
     public static void printDayAverages(double[][] sales) {
         System.out.println("\nAverage sales for each day of the week:");
@@ -142,8 +150,8 @@ public class Sales {
 
     // Day of the week method to return day for averages method
     public static String getDayOfWeek(int dayNumber) {
-    String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-    return days[dayNumber - 1];
+        String[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+        return days[dayNumber - 1];
     }
 
 }

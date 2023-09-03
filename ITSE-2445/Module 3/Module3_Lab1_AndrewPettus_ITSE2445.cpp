@@ -58,14 +58,14 @@ int main() // main loop begin
 
     // use nested loops to generate table
     for (int row = 1; row <= tableSize; ++row){
-        myHtmlFile << "  <tr>" << endl;
-       for (int col = 1; col <= tableSize;  ++col)
+        myHtmlFile << "    <tr>";  // Start a new table row
+       for(int col = 1; col <= tableSize; ++col) {
        {
-        myHtmlFile << "    <td>" << row * col << "</td";
+        myHtmlFile << "<td>" << row * col << "</td>";  // Insert a table data cell and close it
         cout << setw(4) << row * col;
        }
        // Move to next line after each row
-       myHtmlFile << "  </tr>" << endl;
+       myHtmlFile << "</tr>" << endl; // End the table row and move to the next line
        cout << endl;
     }
 

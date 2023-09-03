@@ -1,24 +1,16 @@
 /*
  * ITSE-2457; OOP Java; M/W 2pm
  * Written by Andrew Pettus
- * Apr 25 2023
- * Module 9 Lab 2
+ * Apr 2 2023
+ * Module 7 Lab 3
+ * Reused for Module 9 Lab 2
  * Driver
  */
-/*
- * Create a Driver Program to demonstrate the use of each of the classes. 
- * For the Driver Program, you do not need to get any user input -
- * - simply invoke the needed constructors and print the information for each type of employee. 
- */
+
 import java.util.ArrayList;
 
 public class Driver {
     public static void main(String[] args) {
-
-
-        // So that you know, you do not need to prompt the user for any input. 
-        // When you create an instance of the employee, invoke the subclasses constructor that takes all the arguments as parameters.  
-        // As a note, you will need to use the appropriate constructor for the Salary and Hourly Employee. (You must use polymorphism)
 
         // Create 2 Salary Employees
         SalaryEmployee employee1 = new SalaryEmployee("S1001", "John", "Smith",
@@ -46,15 +38,14 @@ public class Driver {
                 new Address("444 Walnut St", "Whichtown", "TX", "78125"),
                 25.55, 37.50f);
 
-        // In the main program you will create an ArrayList of Employees.
+        // Add all employees to the ArrayList
         ArrayList<Employee> employees = new ArrayList<>();
-        // Add 4 Employees to the ArrayList (2 Salary, 2 Hourly.)
         employees.add(employee1);
         employees.add(employee2);
         employees.add(employee3);
         employees.add(employee4);
 
-        // Iterate through the array list of Employees and print the information using the PrintEmployeeInformation() method.
+        // Print Employee Information
         for (Employee emp : employees) {
             emp.printEmployeeInformation();
             System.out.println("----------------------------------------");

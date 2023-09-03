@@ -22,7 +22,7 @@ import java.util.Scanner;
 
 public class MedSystemDriver {
     public static void main(String[] args) {
-        // Create medical provider instances
+        // Create medical providers; learned some fancy formatting styles
         Doctor doctor1 = new Doctor ("Hugh",    "Jass",     "D0017",    new OfficeLocation("Religious Hospital", "123 Crooked Street", "San Antonio", "Texas", "78229", "210-555-6789"), "Doctor", "DR666", "Suite 101", 240000);
         Doctor doctor2 = new Doctor ("Anita",   "Bath",     "D0145",    new OfficeLocation("Helipad Hosptital",  "656 Main Street",    "San Antonio", "Texas", "78254", "210-555-3344"), "Doctor", "DR911", "Room A54", 195000);
         Nurse   nurse1 = new Nurse  ("Eric",    "Schön",    "N8782",    new OfficeLocation("Creepy Clinic",      "456 Oak Way",        "San Antonio", "Texas", "78245", "210-555-1234"), "Nurse", 35.0, 40.0);
@@ -55,7 +55,6 @@ public class MedSystemDriver {
                 String line = inputScan.nextLine();
                 System.out.println(line);
             }
-            System.out.println("*****************************************************************************");
             inputScan.close();
         } catch (IOException error) {
             System.out.println("An error occurred while reading the file: " + error.getMessage());

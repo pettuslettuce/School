@@ -83,6 +83,5 @@ public class Nurse extends MedicalProvider {
         System.out.println("Hourly Rate: " + this.getHourlyRate());
         System.out.println("Hours Worked: " + this.getHoursWorked());
         System.out.println("Weekly Gross Pay: " + this.calculateWeeklyGrossPay());
-        System.out.println("****************************************************");
     }
 }

@@ -46,34 +46,34 @@ int main() // main loop begin
     // create and open a new html file for output
     ofstream myHtmlFile ("multiplication_table.html");
 
-    // output html formatting
+    // output html formatting, thanks google!
     myHtmlFile << "<!DOCTYPE html>" << endl;
     myHtmlFile << "<html>" << endl;
     myHtmlFile << "<head>" << endl;
-    myHtmlFile << "<title>Multiplication Table</title>" << endl;
+    myHtmlFile << "  <title>Multiplication Table</title>" << endl;
+    myHtmlFile << "  <style>" << endl;
+    myHtmlFile << "    td {" << endl;
+    myHtmlFile << "      text-align: center;" << endl;
+    myHtmlFile << "    }" << endl;
+    myHtmlFile << "  </style>" << endl;
     myHtmlFile << "</head>" << endl;
     myHtmlFile << "<body>" << endl;
     myHtmlFile << "<h1>Multiplication Table</h1>" << endl;
     myHtmlFile << "<table border=\"1\">" << endl;
 
-    // use nested loops to generate table
-    for(int row = 1; row <= tableSize; ++row) {
+    // use nested loops to generate table (similar to the box problem!)
+    for(int row = 1; row <= tableSize; ++row) { // row handling
         myHtmlFile << "    <tr>";  // Start a new table row in HTML
-
-        for(int col = 1; col <= tableSize; ++col) {
-            int product = row * col;
-
-            // Output to HTML
+        for(int col = 1; col <= tableSize; ++col) { // column handling
+            int product = row * col; // product for specific cell
+            // write to html file
             myHtmlFile << "<td>" << product << "</td>";
-
-            // Output to Console
+            // output to user
             cout << setw(4) << product;  // setw is used for formatting output
         }
-
-        // End the HTML table row and move to the next line
-        htmlFile << "</tr>" << endl; 
-
-        // Move to the next line in Console
+        // write HTML table row and move to the next line
+        myHtmlFile << "</tr>" << endl; 
+        // output next line for user
         cout << endl;
     }
     // wrap up html file 

@@ -1,0 +1,6 @@
+The monthly expenses for September: 
+Rent:                  $ 1500.00
+Electric:              $  125.00
+Water:                 $   44.55
+--------------------------------
+Total:                 $ 1669.55

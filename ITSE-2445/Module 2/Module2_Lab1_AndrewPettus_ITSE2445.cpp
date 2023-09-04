@@ -98,7 +98,7 @@ int main() // main loop begin
     } else {
         if (isOneLargest) cout << "Option 1";
         if (isOneLargest && isTwoLargest) cout << " or ";
-        if (isTwoLargest) cout << "Option 1";
+        if (isTwoLargest) cout << "Option 2";
         if ((isOneLargest || isTwoLargest) && isThreeLargest) cout << " or ";
         if (isThreeLargest) cout << "Option 3";
             //conditionals if any two amounts were equal

@@ -101,8 +101,8 @@ int main() // main loop begin
         if (isTwoLargest) cout << "Option 2";
         if ((isOneLargest || isTwoLargest) && isThreeLargest) cout << " or ";
         if (isThreeLargest) cout << "Option 3";
-            //conditionals if any two amounts were equal
-          if (isOneLargest && isTwoLargest) cout << ". Option 1 and Option 2 are equal."; 
+        //conditionals if any two amounts were equal
+        if (isOneLargest && isTwoLargest) cout << ". Option 1 and Option 2 are equal."; 
         else if (isOneLargest && isThreeLargest) cout << ". Option 1 and Option 3 are equal.";
         else if (isTwoLargest && isThreeLargest) cout << ". Option 2 and Option 3 are equal.";
         else cout << ".";

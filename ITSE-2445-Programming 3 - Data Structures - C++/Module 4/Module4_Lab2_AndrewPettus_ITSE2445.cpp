@@ -29,15 +29,15 @@ double carMPG[ARRAY_SIZE] = {25.4, 34.1, 14.5, 31.1, 19.2};                     
 void carReport (string carName[], double carMPG[]);                                                          // Function declaration for carReport, which takes in two arrays, one of type string and one of type double
 int main(){                                                                                                  // Main-loop begin
     carReport(carName, carMPG);                                                                              // Call the carReport function and pass in the carName and carMPG arrays
-    return 0; }                                                                                              // Potential return code for successful main loop                                                                                                          // Bracket
+    return 0; }                                                                                              // Potential return code for successful main loop                                                                                                          
 void carReport (string carName[], double carMPG[]){                                                          // Function definition for carReport
     for (int i = 0; i < ARRAY_SIZE; i++){                                                                    // Iterate through array based on 'ARRAY_SIZE'
         cout << "Car: " << carName[i] << endl;                                                               // Output the name of the car at index 'i'
         cout << "MPG: " << carMPG[i] << endl;                                                                // Output the MPG value of the car at index 'i'                                                                                      
         if (carMPG[i] < 30.0){                                                                               // Check the MPG value and provide a comment based on its value; If the MPG value is less than 30...
-            cout << "That's a gas guzzler!" << endl;}                                                        // ...Output that the car is a gas guzzler                                                                                                       // Bracket
+            cout << "That's a gas guzzler!" << endl;}                                                        // ...Output that the car is a gas guzzler                                                                                                       
         else if (carMPG[i] >= 30.0){                                                                         // If the MPG value is 30 or greater...
-            cout << "That's economical!" << endl;}}}                                                         // ...Output that the car is economical                                                                                               // Bracket
+            cout << "That's economical!" << endl;}}}                                                         // ...Output that the car is economical                                                                                               
 
 
 

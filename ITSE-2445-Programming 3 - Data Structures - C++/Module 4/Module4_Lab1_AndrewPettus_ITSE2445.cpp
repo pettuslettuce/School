@@ -109,7 +109,7 @@ int main() {                                                                    
     //--------------------------------------------------------------------------------------------------------------------------
     // Step 4: Ask the user for a position (i.e., an index) in the vector. 
     // Remove the integer at that position and display the contents of the vector again.
-    cout << "Enter an index to remove the integer at: ";            // Step 4 Prompt
+    cout << "Enter an index to remove the integer at: ";                            // Step 4 Prompt
     cin >> vectorPosition;                                                          // CharacterInput - entered integer stored in 'vectorPosition' var
     if (vectorPosition >= 0 && vectorPosition < static_cast<int>(numbers.size())) { // confirm position entered is within the range of the vector indices (greater or = to 0 and less than the vector size)
         numbers.erase(numbers.begin() + vectorPosition);                            // if position is valid, 'erase' integer located at that index
@@ -117,13 +117,11 @@ int main() {                                                                    
         for (int i = 0; i < numbers.size(); ++i) {                                  // for-loop with end of loop reflective of vector size
             cout << numbers[i] << " ";                                              // output the value per the respective iterated index in the vector array
         }
-                                                                              //
-        cout << endl; 
-        }                                                               // output endline
-    else {                                                                      // else if position is invalid
+        cout << endl;                                                               // output endline
+        }            
+    else {                                                                          // else if position is invalid
         cout << "Invalid position." << endl;                                        // output indicating invalid position supplied
     }
-    
     //--------------------------------------------------------------------------------------------------------------------------
     // Step 5: Prompt user for value to insert into the vector and its position. 
     // Insert the value into the vector at the specified position and display the contents of the vector one last time. 
@@ -137,7 +135,7 @@ int main() {                                                                    
         for (int i = 0; i < numbers.size(); ++i) {                                  // for-loop with end of loop reflective of vector size
             cout << numbers[i] << " ";}                                             // output the value per the respective iterated index in the vector array                                                                       
         cout << endl;
-        }                                                               // output endline
+        }                                                                           // output endline
     else {                                                                          // else if position is invalid
         cout << "Invalid position." << endl;}                                       // output indicating invalid position supplied                                                                 
     return 0;                                                                       // main loop return code

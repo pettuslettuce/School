@@ -25,7 +25,7 @@ Your output will use a function that takes the 2 Arrays as parameters
 using namespace std;                                                                                         // Use the Standard Library namespace to avoid using std:: before every standard library object
 const int ARRAY_SIZE = 5;                                                                                    // Declare a constant integer 'ARRAY_SIZE' to define the size of the arrays
 string carName[ARRAY_SIZE] = {"Fork Fission", "Superoo Impressive", "Shevy Chase", "Hondo Acrid", "Owdi PP"};// Initialize a string array 'carName' with fun fake names of cars; ARRAY_SIZE is used to define its size
-double carMPG[ARRAY_SIZE] = {25.4, 34.1, 14.5, 31.1, 19.2};                                                  // Initialize a double array 'carMPG' with miles-per-gallon (MPG) values for cars; ARRAY_SIZE is used to define its size
+double carMPG [ARRAY_SIZE] = {          25.4,                 34.1,          14.5,          31.1,      19.2};// Initialize a double array 'carMPG' with miles-per-gallon (MPG) values for cars; ARRAY_SIZE is used to define its size
 void carReport (string carName[], double carMPG[]);                                                          // Function declaration for carReport, which takes in two arrays, one of type string and one of type double
 int main(){                                                                                                  // Main-loop begin
     carReport(carName, carMPG);                                                                              // Call the carReport function and pass in the carName and carMPG arrays

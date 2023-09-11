@@ -79,23 +79,23 @@ int main() {                                                                  //
             cout << "Invalid menuChoice!\n";                                  // display error message
             continue;                                                         // skip the rest of the loop iteration
         }
-        cout << " is equal to " << result << '\n';                            // display the result
+        cout << " = " << result << '\n';                            // display the result
     }
     return 0;                                                                 // return 0 indicating successful execution
 }
 double addition(double a, double b) {                                         // addition function definition
-    cout << a << " added to " << b << ends;                                   // display operation
+    cout << a << " + " << b << ends;                                   // display operation
     return a + b;                                                             // return the result
 }
 double subtraction(double a, double b) {                                      // subtraction function definition
-    cout << a << " subtracted from " << b << ends;                            // display operation
+    cout << a << " - " << b << ends;                            // display operation
     return a - b;                                                             // return the result
 }
 double multipltication(double a, double b) {                                  // multiplication function definition (note: typo in function name)
-    cout << a << " multiplied by " << b << ends;                              // display operation
+    cout << a << " x " << b << ends;                              // display operation
     return a * b;                                                             // return the result
 }
 double division(double a, double b) {                                         // division function definition
-    cout << a << " divided by " << b << ends;                                 // display operation
+    cout << a << " / " << b << ends;                                 // display operation
     return a / b;                                                             // return the result
 }

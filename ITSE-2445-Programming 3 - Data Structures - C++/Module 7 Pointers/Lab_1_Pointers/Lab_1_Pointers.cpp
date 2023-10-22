@@ -20,7 +20,7 @@ int main() {
     // print the value of myNumber
     cout << "The value of myNumber: " << myNumber << endl;
     // print the memory address of myNumber
-    cout << "The memory address of myNumber: " << myPointer << endl;
+    cout << "The memory address of myNumber: " << &myNumber << endl;
     // print the value of the pointer variable myPointer
     cout << "The mvalue of the pointer variable myPointer: " << myPointer << endl;
     // print the value pointed to by myPointer (which is the value of myNumber)
